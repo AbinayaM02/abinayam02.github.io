@@ -7,4 +7,8 @@
 name = "site"
 
 # This page should be the root of your website. It's important.
+<<<<<<< HEAD
 page = "https://abinayamahendiran.notion.site/Abinaya-Mahendiran-0af19f502424414aadb78eaf907e99de"
+=======
+page = "<your Notion share URL here>"
+>>>>>>> template/main
