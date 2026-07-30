@@ -2,24 +2,25 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <strong>Co-founder/CTO</strong> at <a href='https://nunnarilabs.com/'>Nunnari Labs</a> & Program Manager (Part-time) at <a href='https://hidden-voices.github.io/'>IITM</a>
 
 profile:
-  align: right
-  image: prof_pic.jpg
+  align: left
+  image: abinaya.png
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  # more_info: >
+  #   <p>555 your office number</p>
+  #   <p>123 your address street</p>
+  #   <p>Your City, State 12345</p>
 
 news: true # includes a list of news items
+latest_posts: true # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I’m currently the CTO of Nunnari Labs (Coimbatore) where I manage the technological strategy, orchestrate the development of cutting-edge AI and ML solutions while staying attuned to the ever-evolving landscape of the AI/ML domain. I have more than a decade of experience in managing distributed teams and building end-to-end AI/ML solutions and products for some of the Fortune 500 companies and one of the big four consulting firms. I also hold a part-time Program Manager role at IITM for an open source project called, Hidden Voices, that aims to close the gender gap on Wikipedia. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I identify myself as a seasoned engineer with the right blend of data science and engineering skills with expertise in NLP, NLG, MLOps, Gen AI and LLMOps. I love contributing to open source and have published several research papers as a result.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I also co-lead an open source community called [AI Tamil Nadu](https://aitamilnadu.org/) for the past six years and have been contributing back to the community through mentoring students and young professionals, by writing technical articles and organizing events and sharing knowledge through technical talks. 

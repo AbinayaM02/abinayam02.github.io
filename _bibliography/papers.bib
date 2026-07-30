@@ -1,115 +1,76 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@misc{dhole2022nlaugmenter,
+      title={NL-Augmenter: A Framework for Task-Sensitive Natural Language Augmentation}, 
+      author={Kaustubh D. Dhole and Varun Gangal and Sebastian Gehrmann and Aadesh Gupta and Zhenhao Li and Saad Mahamood and Abinaya Mahendiran and Simon Mille and Ashish Shrivastava and Samson Tan and Tongshuang Wu and Jascha Sohl-Dickstein and Jinho D. Choi and Eduard Hovy and Ondrej Dusek and Sebastian Ruder and Sajant Anand and Nagender Aneja and Rabin Banjade and Lisa Barthe and Hanna Behnke and Ian Berlot-Attwell and Connor Boyle and Caroline Brun and Marco Antonio Sobrevilla Cabezudo and Samuel Cahyawijaya and Emile Chapuis and Wanxiang Che and Mukund Choudhary and Christian Clauss and Pierre Colombo and Filip Cornell and Gautier Dagan and Mayukh Das and Tanay Dixit and Thomas Dopierre and Paul-Alexis Dray and Suchitra Dubey and Tatiana Ekeinhor and Marco Di Giovanni and Tanya Goyal and Rishabh Gupta and Rishabh Gupta and Louanes Hamla and Sang Han and Fabrice Harel-Canada and Antoine Honore and Ishan Jindal and Przemyslaw K. Joniak and Denis Kleyko and Venelin Kovatchev and Kalpesh Krishna and Ashutosh Kumar and Stefan Langer and Seungjae Ryan Lee and Corey James Levinson and Hualou Liang and Kaizhao Liang and Zhexiong Liu and Andrey Lukyanenko and Vukosi Marivate and Gerard de Melo and Simon Meoni and Maxime Meyer and Afnan Mir and Nafise Sadat Moosavi and Niklas Muennighoff and Timothy Sum Hon Mun and Kenton Murray and Marcin Namysl and Maria Obedkova and Priti Oli and Nivranshu Pasricha and Jan Pfister and Richard Plant and Vinay Prabhu and Vasile Pais and Libo Qin and Shahab Raji and Pawan Kumar Rajpoot and Vikas Raunak and Roy Rinberg and Nicolas Roberts and Juan Diego Rodriguez and Claude Roux and Vasconcellos P. H. S. and Ananya B. Sai and Robin M. Schmidt and Thomas Scialom and Tshephisho Sefara and Saqib N. Shamsi and Xudong Shen and Haoyue Shi and Yiwen Shi and Anna Shvets and Nick Siegel and Damien Sileo and Jamie Simon and Chandan Singh and Roman Sitelew and Priyank Soni and Taylor Sorensen and William Soto and Aman Srivastava and KV Aditya Srivatsa and Tony Sun and Mukund Varma T and A Tabassum and Fiona Anting Tan and Ryan Teehan and Mo Tiwari and Marie Tolkiehn and Athena Wang and Zijian Wang and Gloria Wang and Zijie J. Wang and Fuxuan Wei and Bryan Wilie and Genta Indra Winata and Xinyi Wu and Witold Wydmański and Tianbao Xie and Usama Yaseen and Michael A. Yee and Jing Zhang and Yue Zhang},
+      year={2022},
+      eprint={2112.02721},
+      archivePrefix={arXiv},
+      preview={dhole.png},
+      selected={true},
+      abstract={Data augmentation is an important component in the robustness evaluation of models in natural language processing (NLP) and in enhancing the diversity of the data they are trained on. In this paper, we present NL-Augmenter, a new participatory Python-based natural language augmentation framework which supports the creation of both transformations (modifications to the data) and filters (data splits according to specific features). We describe the framework and an initial set of 117 transformations and 23 filters for a variety of natural language tasks. We demonstrate the efficacy of NL-Augmenter by using several of its transformations to analyze the robustness of popular natural language models. The infrastructure, datacards and robustness analysis results are available publicly on the NL-Augmenter repository},
+      primaryClass={cs.CL}
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@misc{gehrmann2022gemv2,
+      title={GEMv2: Multilingual NLG Benchmarking in a Single Line of Code}, 
+      author={Sebastian Gehrmann and Abhik Bhattacharjee and Abinaya Mahendiran and Alex Wang and Alexandros Papangelis and Aman Madaan and Angelina McMillan-Major and Anna Shvets and Ashish Upadhyay and Bingsheng Yao and Bryan Wilie and Chandra Bhagavatula and Chaobin You and Craig Thomson and Cristina Garbacea and Dakuo Wang and Daniel Deutsch and Deyi Xiong and Di Jin and Dimitra Gkatzia and Dragomir Radev and Elizabeth Clark and Esin Durmus and Faisal Ladhak and Filip Ginter and Genta Indra Winata and Hendrik Strobelt and Hiroaki Hayashi and Jekaterina Novikova and Jenna Kanerva and Jenny Chim and Jiawei Zhou and Jordan Clive and Joshua Maynez and João Sedoc and Juraj Juraska and Kaustubh Dhole and Khyathi Raghavi Chandu and Laura Perez-Beltrachini and Leonardo F. R. Ribeiro and Lewis Tunstall and Li Zhang and Mahima Pushkarna and Mathias Creutz and Michael White and Mihir Sanjay Kale and Moussa Kamal Eddine and Nico Daheim and Nishant Subramani and Ondrej Dusek and Paul Pu Liang and Pawan Sasanka Ammanamanchi and Qi Zhu and Ratish Puduppully and Reno Kriz and Rifat Shahriyar and Ronald Cardenas and Saad Mahamood and Salomey Osei and Samuel Cahyawijaya and Sanja Štajner and Sebastien Montella and Shailza and Shailza Jolly and Simon Mille and Tahmid Hasan and Tianhao Shen and Tosin Adewumi and Vikas Raunak and Vipul Raheja and Vitaly Nikolaev and Vivian Tsai and Yacine Jernite and Ying Xu and Yisi Sang and Yixin Liu and Yufang Hou},
+      year={2022},
+      eprint={2206.11249},
+      archivePrefix={arXiv},
+      preview={gehrmann.png},
+      selected={true},
+      abstract={Evaluation in machine learning is usually informed by past choices, for example which datasets or metrics to use. This standardization enables the comparison on equal footing using leaderboards, but the evaluation choices become sub-optimal as better alternatives arise. This problem is especially pertinent in natural language generation which requires ever-improving suites of datasets, metrics, and human evaluation to make definitive claims. To make following best model evaluation practices easier, we introduce GEMv2. The new version of the Generation, Evaluation, and Metrics Benchmark introduces a modular infrastructure for dataset, model, and metric developers to benefit from each others work. GEMv2 supports 40 documented datasets in 51 languages. Models for all datasets can be evaluated online and our interactive data card creation and rendering tools make it easier to add new datasets to the living benchmark.},
+      primaryClass={cs.CL}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@misc{singh2024aya,
+      title={Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning}, 
+      author={Shivalika Singh and Freddie Vargus and Daniel Dsouza and Börje F. Karlsson and Abinaya Mahendiran and Wei-Yin Ko and Herumb Shandilya and Jay Patel and Deividas Mataciunas and Laura OMahony and Mike Zhang and Ramith Hettiarachchi and Joseph Wilson and Marina Machado and Luisa Souza Moura and Dominik Krzemiński and Hakimeh Fadaei and Irem Ergün and Ifeoma Okoh and Aisha Alaagib and Oshan Mudannayake and Zaid Alyafeai and Vu Minh Chien and Sebastian Ruder and Surya Guthikonda and Emad A. Alghamdi and Sebastian Gehrmann and Niklas Muennighoff and Max Bartolo and Julia Kreutzer and Ahmet Üstün and Marzieh Fadaee and Sara Hooker},
+      year={2024},
+      eprint={2402.06619},
+      archivePrefix={arXiv},
+      preview={singh.png},
+      selected={true},
+      abstract={Datasets are foundational to many breakthroughs in modern artificial intelligence. Many recent achievements in the space of natural language processing (NLP) can be attributed to the finetuning of pre-trained models on a diverse set of tasks that enables a large language model (LLM) to respond to instructions. Instruction fine-tuning (IFT) requires specifically constructed and annotated datasets. However, existing datasets are almost all in the English language. In this work, our primary goal is to bridge the language gap by building a human-curated instruction-following dataset spanning 65 languages. We worked with fluent speakers of languages from around the world to collect natural instances of instructions and completions. Furthermore, we create the most extensive multilingual collection to date, comprising 513 million instances through templating and translating existing datasets across 114 languages. In total, we contribute four key resources: we develop and open-source the Aya Annotation Platform, the Aya Dataset, the Aya Collection, and the Aya Evaluation Suite. The Aya initiative also serves as a valuable case study in participatory research, involving collaborators from 119 countries. We see this as a valuable framework for future research collaborations that aim to bridge gaps in resources.},
+      primaryClass={cs.CL}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@techreport{dataaug,
+     title = {Data Augmentation Techniques for Tabular Data},
+     author = {Abinaya Mahendiran and Vedanth Subramaniam},
+     year = {2020},
+     institution = {Mphasis, NEXT Labs},
+     preview={dataaug.png},
+     pdf={https://www.mphasis.com/content/dam/mphasis-com/global/en/home/innovation/next-lab/Mphasis_Data-Augmentation-for-Tabular-Data_Whitepaper.pdf}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@techreport{mlops,
+     title = {Machine Learning & IT Operations to Manage End-to-End Machine Learning Life Cycles},
+     author = {Jai Ganesh and Archisman Majumdar and Saurabh Singh and Kaushlesh Kumar and Abinaya Mahendiran},
+     year = {2019},
+     institution = {Mphasis, NEXT Labs},
+     preview={mlops.png},
+     pdf={https://www.mphasis.com/content/dam/mphasis-com/global/en/home/innovation/next-lab/thoughtleadership/machine-learning-and-it-operations-to-manage-end-to-end-machine-learning-life-cycles.pdf}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@techreport{cogno,
+     title = {Improving Search Relevance in Question Answering Engine},
+     author = {Abinaya Mahendiran and Faustina Selvadeepa},
+     year = {2018},
+     institution = {Mphasis, NEXT Labs},
+     preview={cogno.png},
+     pdf={https://www.mphasis.com/content/dam/mphasis-com/global/en/home/innovation/next-lab/thoughtleadership/improving-search-relevance-in-question-answering-engine.pdf}
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@article{article,
+     author={Abinaya Mahendiran and Srivatsan Sridharan and Sushanth Bhat and Shrisha Rao},
+     year={2015},
+     month={06},
+     pages={67-},
+     title={Cross-Referencing Cancer Data Using GPU for Multinomial Classification of Genetic Markers},
+     volume={2},
+     journal={CSI Journal of Computing},
+     preview={cancer.png}
 }
