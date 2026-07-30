@@ -131,8 +131,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: blog # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: technical blog # blog_name will be displayed in your blog page
+blog_description: # shown as a subtitle under blog_name; leave blank to hide
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -194,7 +194,7 @@ collections:
     permalink: /:collection/:title/
 
 announcements:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 

@@ -1,4 +1,5 @@
 require 'feedjira'
+require 'fileutils'
 require 'httparty'
 require 'jekyll'
 require 'nokogiri'
@@ -13,19 +14,57 @@ module ExternalPosts
       if site.config['external_sources'] != nil
         site.config['external_sources'].each do |src|
           puts "Fetching external posts from #{src['name']}:"
-          if src['rss_url']
-            fetch_from_rss(site, src)
-          elsif src['posts']
-            fetch_from_urls(site, src)
+          begin
+            if src['rss_url']
+              fetch_from_rss(site, src)
+            elsif src['posts']
+              fetch_from_urls(site, src)
+            end
+          rescue StandardError => e
+            # A flaky or rate-limited feed must not fail the whole build.
+            Jekyll.logger.warn "External posts:", "skipping #{src['name']} (#{e.class}: #{e.message})"
           end
         end
       end
     end
 
+    # Feeds behind Cloudflare (medium.com) intermittently answer 429 with an HTML
+    # challenge page, which is not parseable as a feed. Cache the last good
+    # response so a throttled fetch reuses it instead of dropping every post.
+    def cache_path(site, src)
+      dir = site.in_source_dir('.jekyll-cache', 'external-posts')
+      FileUtils.mkdir_p(dir)
+      slug = src['name'].to_s.downcase.gsub(/[^\w.-]/, '-')
+      File.join(dir, "#{slug}.xml")
+    end
+
     def fetch_from_rss(site, src)
-      xml = HTTParty.get(src['rss_url']).body
+      cache = cache_path(site, src)
+      xml = nil
+
+      response = HTTParty.get(src['rss_url'])
+      if response.code == 200 && !response.body.to_s.empty?
+        xml = response.body
+        File.write(cache, xml)
+      else
+        Jekyll.logger.warn "External posts:", "#{src['name']} returned HTTP #{response.code}"
+      end
+
+      if xml.nil? && File.exist?(cache)
+        Jekyll.logger.warn "External posts:", "using cached feed for #{src['name']}"
+        xml = File.read(cache)
+      end
+
       return if xml.nil?
-      feed = Feedjira.parse(xml)
+
+      begin
+        feed = Feedjira.parse(xml)
+      rescue Feedjira::NoParserAvailable
+        # A poisoned cache is worse than none: drop it so the next build refetches.
+        File.delete(cache) if File.exist?(cache)
+        raise
+      end
+
       process_entries(site, src, feed.entries)
     end
 
@@ -36,9 +75,23 @@ module ExternalPosts
           title: e.title,
           content: e.content,
           summary: e.summary,
-          published: e.published
+          published: e.published,
+          thumbnail: first_image(e.content)
         })
       end
+    end
+
+    # Pull the lead image out of the feed body so external posts get a thumbnail
+    # in the blog list, the same as local posts with a `thumbnail` front matter.
+    def first_image(content)
+      return nil if content.nil? || content.empty?
+      img = Nokogiri::HTML(content).at('img')
+      return nil if img.nil?
+      src = img['src']
+      return nil if src.nil? || src.strip.empty?
+      # Feeds sometimes carry 1px tracking pixels; those make useless thumbnails.
+      return nil if img['width'].to_i == 1 || img['height'].to_i == 1
+      src.strip
     end
 
     def create_document(site, source_name, url, content)
@@ -62,6 +115,7 @@ module ExternalPosts
       doc.data['description'] = content[:summary]
       doc.data['date'] = content[:published]
       doc.data['redirect'] = url
+      doc.data['thumbnail'] = content[:thumbnail] if content[:thumbnail]
       site.collections['posts'].docs << doc
     end
 
