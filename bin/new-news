@@ -1,0 +1,119 @@
+#!/usr/bin/env bash
+#
+# Scaffold a news item in _news/.
+#
+# Intended for cross-posting LinkedIn updates: LinkedIn has no public RSS for
+# personal profiles and no read API for your own posts, so news items are
+# written by hand. LinkedIn posts also have no title field, which is why the
+# default here is an inline item (a dated one-liner) rather than a titled page.
+#
+# Usage:
+#   bin/new-news "Text of the update" [--link URL] [--date YYYY-MM-DD]
+#   bin/new-news "Body text" --title "A longer announcement" [--link URL]
+#
+# Examples:
+#   bin/new-news "Spoke at PyCon India on multilingual NLG." \
+#     --link https://www.linkedin.com/posts/abinayamahendiran_example
+#
+#   bin/new-news "Full write-up of the talk, slides and notes." \
+#     --title "PyCon India 2026 talk" --date 2026-07-15
+
+set -euo pipefail
+
+usage() {
+  sed -n '3,20p' "$0" | sed 's/^# \{0,1\}//'
+  exit "${1:-0}"
+}
+
+TEXT=""
+LINK=""
+TITLE=""
+DATE=""
+
+[ $# -eq 0 ] && usage 1
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -h | --help) usage 0 ;;
+    --link)
+      LINK="${2:-}"
+      [ -z "$LINK" ] && { echo "error: --link needs a URL" >&2; exit 1; }
+      shift 2
+      ;;
+    --title)
+      TITLE="${2:-}"
+      [ -z "$TITLE" ] && { echo "error: --title needs a value" >&2; exit 1; }
+      shift 2
+      ;;
+    --date)
+      DATE="${2:-}"
+      case "$DATE" in
+        [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;;
+        *) echo "error: --date must be YYYY-MM-DD" >&2; exit 1 ;;
+      esac
+      shift 2
+      ;;
+    -*) echo "error: unknown option $1" >&2; usage 1 ;;
+    *)
+      [ -n "$TEXT" ] && { echo "error: unexpected argument '$1'" >&2; usage 1; }
+      TEXT="$1"
+      shift
+      ;;
+  esac
+done
+
+[ -z "$TEXT" ] && { echo "error: no text given" >&2; usage 1; }
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+NEWS_DIR="$ROOT/_news"
+mkdir -p "$NEWS_DIR"
+
+[ -z "$DATE" ] && DATE="$(date +%Y-%m-%d)"
+STAMP="$DATE $(date +%H:%M:%S)$(date +%z)"
+
+# Slug from the title if there is one, otherwise from the first few words.
+SLUG_SOURCE="${TITLE:-$TEXT}"
+SLUG="$(printf '%s' "$SLUG_SOURCE" \
+  | tr '[:upper:]' '[:lower:]' \
+  | tr -cs '[:alnum:]' '-' \
+  | sed 's/^-//; s/-$//' \
+  | cut -c1-50 \
+  | sed 's/-$//')"
+[ -z "$SLUG" ] && SLUG="update"
+
+FILE="$NEWS_DIR/$DATE-$SLUG.md"
+if [ -e "$FILE" ]; then
+  echo "error: $FILE already exists" >&2
+  exit 1
+fi
+
+BODY="$TEXT"
+[ -n "$LINK" ] && BODY="$TEXT [Read more]($LINK)"
+
+if [ -n "$TITLE" ]; then
+  cat > "$FILE" <<EOF
+---
+layout: post
+title: $TITLE
+date: $STAMP
+inline: false
+related_posts: false
+---
+
+$BODY
+EOF
+else
+  cat > "$FILE" <<EOF
+---
+layout: post
+date: $STAMP
+inline: true
+related_posts: false
+---
+
+$BODY
+EOF
+fi
+
+echo "Created ${FILE#"$ROOT"/}"
+echo "It will appear on the homepage and at /news/ on the next build."
