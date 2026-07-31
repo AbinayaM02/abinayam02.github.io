@@ -76,9 +76,18 @@ module ExternalPosts
           content: e.content,
           summary: e.summary,
           published: e.published,
-          thumbnail: first_image(e.content)
+          thumbnail: first_image(e.content),
+          tags: entry_tags(e)
         })
       end
+    end
+
+    # Medium publishes each post's tags as <category> elements, so external
+    # posts can carry the same tag list as local ones.
+    def entry_tags(entry)
+      raw = entry.respond_to?(:categories) ? entry.categories : nil
+      return [] if raw.nil?
+      Array(raw).map { |t| t.to_s.strip }.reject(&:empty?).uniq
     end
 
     # Pull the lead image out of the feed body so external posts get a thumbnail
@@ -116,6 +125,7 @@ module ExternalPosts
       doc.data['date'] = content[:published]
       doc.data['redirect'] = url
       doc.data['thumbnail'] = content[:thumbnail] if content[:thumbnail]
+      doc.data['tags'] = content[:tags] if content[:tags] && !content[:tags].empty?
       site.collections['posts'].docs << doc
     end
 
