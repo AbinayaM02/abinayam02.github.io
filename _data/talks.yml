@@ -1,39 +1,88 @@
-# Technical talks and presentations.
-# Add a new one at the top: title, date (YYYY-MM-DD), venue, and optionally
-# `mode` (In-person / Virtual), `url` for slides or recording.
+# Technical talks and presentations, newest first.
+# Fields: title, date (YYYY-MM-DD), venue, mode (In-person / Virtual),
+#         img (under assets/img/talks/), description, url (slides or recording).
 - title: 22nd International Conference on Tamil Computing
   date: 2023-10-13
   mode: In-person
+  img: assets/img/talks/tamil_computing.jpg
+  description: >
+    INFITT and KCT, Coimbatore co-organized the 22nd Tamil Computing Conference
+    aiming to bridge the gap between Tamil and technology. I delivered a talk on
+    "Building Tamil AI - Open challenges and the role of community".
+
 - title: Who is building open source AI?
   date: 2023-09-21
   mode: In-person
+  img: assets/img/talks/open_source_ai.png
+  description: >
+    The Turing Way organized a panel discussion on "Who is building open source
+    AI?". I was part of the expert panel, sharing my experiences on managing and
+    contributing to open source projects.
+
 - title: Demystifying Generative AI
   date: 2023-05-16
   mode: Virtual
+  img: assets/img/talks/generative_ai.png
+  description: >
+    As part of AnitaB.org's AI Impact Day, I presented a virtual talk on
+    "Demystifying Generative AI" with a special focus on NLP.
+
 - title: How to contribute to open source?
   date: 2023-04-29
   mode: In-person
+  img: assets/img/talks/contribute_oss.jpg
+  description: >
+    As part of the International Women's Day event organized by Jansons Institute
+    of Technology, Coimbatore, I delivered a talk on how one can start contributing
+    to open source projects, aimed at beginners starting their open source journey.
+
 - title: How to stand out in your job search?
   date: 2023-04-01
   mode: In-person
+  img: assets/img/talks/job_search.jpg
+  description: >
+    As part of the International Women's Day event organized by the WTM Coimbatore
+    chapter, I delivered a talk on developing the necessary technical and soft
+    skills, and building resumes and portfolios, aimed at both freshers and
+    experienced professionals.
+
 - title: Testing and Debugging Machine Learning Systems
   date: 2023-03-24
   mode: In-person
+  img: assets/img/talks/testing_ml.jpg
+
 - title: Building an end-to-end NLP application
   date: 2022-06-05
   venue: WiDS Mysuru
+  img: assets/img/talks/nlp_app.png
+  url: https://www.youtube.com/watch?v=eZ-EWfbWKnU
+
 - title: How to transition into Data Science
   date: 2022-04-16
   venue: WiDS Mysuru
+  img: assets/img/talks/transition_ds.png
+  url: https://www.youtube.com/watch?v=xbFjku2KgYo
+
 - title: Building Human-in-the-loop pipeline in MLOps
   date: 2022-03-08
   venue: Tech(K)now Day
+  img: assets/img/talks/hitl_mlops.png
+  url: https://www.youtube.com/watch?v=l3cUJi6u4M8
+
 - title: A Primer on MLOps
   date: 2021-03-08
   venue: Tech(K)now Day
+  img: assets/img/talks/primer_mlops.png
+  url: https://www.youtube.com/watch?v=gFW86inAF9o
+
 - title: Demystifying MLOps
   date: 2020-09-27
   venue: WiDS Mysuru
+  img: assets/img/talks/demystifying_mlops.png
+  url: https://www.youtube.com/watch?v=eSKhMnNVfAE&t=4177s
+
 - title: Entry level data science jobs
   date: 2020-02-21
   venue: Springboard
+  img: assets/img/talks/entry_level_ds.png
+  url: https://www.youtube.com/watch?v=Vsi2Wn6mAlc
