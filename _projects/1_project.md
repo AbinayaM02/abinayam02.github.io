@@ -1,13 +1,17 @@
 ---
 layout: page
 title: Genetic Markers for Cancer
-description: This is a GPU based project aimed at implementing a machine learning algorithm that can examine cancer datasets and identify multiple genetic markers that are associated with the same type of cancer, and also cases where a single genetic marker is associated with multiple types of cancers. The implementation of backend is done using CUDA C. HTML and Javascript is used for the frontend.
+description: A GPU-accelerated classifier that links genetic markers to one or more cancer types, with a CUDA C backend.
 img: assets/img/cancer.png
 importance: 1
 url: https://github.com/AbinayaM02/OSProject9C2
 category: academic
-related_publications: true
 ---
+
+This is a GPU based project aimed at implementing a machine learning algorithm that can examine cancer
+datasets and identify multiple genetic markers that are associated with the same type of cancer, and also
+cases where a single genetic marker is associated with multiple types of cancers. The implementation of the
+backend is done using CUDA C. HTML and Javascript is used for the frontend.
 
 <b> Abstract </b>
 
