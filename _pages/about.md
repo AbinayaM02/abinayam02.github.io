@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <strong>Co-founder/CTO</strong> at <a href='https://nunnarilabs.com/'>Nunnari Labs</a> &middot; Researcher in NLP, DL, MLOps & Generative AI &middot; Mentor & Open Source Contributor
+subtitle: <strong>CTO</strong> at <a href='https://nunnarilabs.com/'>Nunnari Labs</a> &middot; Researcher in NLP, DL, MLOps & Generative AI &middot; Mentor & Open Source Contributor
 
 profile:
   align: left
