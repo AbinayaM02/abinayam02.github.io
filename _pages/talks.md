@@ -22,7 +22,7 @@ nav_order: 4
   {% assign years = year_list | split: "," %}
   {% for talk_year in years %}
     <a id="{{ talk_year }}" href=".#{{ talk_year }}">
-      <h2 class="year">{{ talk_year }}</h2>
+      <h2 class="category">{{ talk_year }}</h2>
     </a>
     <div class="row row-cols-1 row-cols-md-3">
       {% for talk in talks %}
