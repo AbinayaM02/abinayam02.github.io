@@ -4,8 +4,8 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-cv_pdf: example_pdf.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+cv_pdf: # drop a PDF in assets/pdf/ and name it here to show a download button
+description: Education, skills, certifications and community work.
 toc:
   sidebar: left
 ---

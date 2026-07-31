@@ -1,0 +1,39 @@
+# Technical talks and presentations.
+# Add a new one at the top: title, date (YYYY-MM-DD), venue, and optionally
+# `mode` (In-person / Virtual), `url` for slides or recording.
+- title: 22nd International Conference on Tamil Computing
+  date: 2023-10-13
+  mode: In-person
+- title: Who is building open source AI?
+  date: 2023-09-21
+  mode: In-person
+- title: Demystifying Generative AI
+  date: 2023-05-16
+  mode: Virtual
+- title: How to contribute to open source?
+  date: 2023-04-29
+  mode: In-person
+- title: How to stand out in your job search?
+  date: 2023-04-01
+  mode: In-person
+- title: Testing and Debugging Machine Learning Systems
+  date: 2023-03-24
+  mode: In-person
+- title: Building an end-to-end NLP application
+  date: 2022-06-05
+  venue: WiDS Mysuru
+- title: How to transition into Data Science
+  date: 2022-04-16
+  venue: WiDS Mysuru
+- title: Building Human-in-the-loop pipeline in MLOps
+  date: 2022-03-08
+  venue: Tech(K)now Day
+- title: A Primer on MLOps
+  date: 2021-03-08
+  venue: Tech(K)now Day
+- title: Demystifying MLOps
+  date: 2020-09-27
+  venue: WiDS Mysuru
+- title: Entry level data science jobs
+  date: 2020-02-21
+  venue: Springboard

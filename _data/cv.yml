@@ -2,96 +2,132 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Abinaya Mahendiran
+    - name: Based in
+      value: Coimbatore, India
     - name: Languages
-      value: English, German
+      value: English, Tamil, Hindi, Kannada
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: M. Tech (Information Technology)
+      institution: International Institute of Information Technology Bangalore, Bangalore
+      year: 2012 - 2014
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - CGPA 3.61 / 4.0
+    - title: B. Tech (Information Technology)
+      institution: Amrita Vishwa Vidyapeetham, Coimbatore
+      year: 2006 - 2010
       description:
-        - Description 1.
-        - Description 2.
+        - CGPA 8.17 / 10.0
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Languages & Frameworks
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Python
+        - PyTorch
+        - TensorFlow
+        - Scikit-learn
+        - spaCy
+        - HuggingFace
+        - FastAPI
+    - title: MLOps & Infrastructure
       items:
-        - Description 1.
-        - Description 2.
+        - MLFlow
+        - Weights & Biases
+        - Docker
+        - AWS
+        - GCP
+        - Jupyter
 
-- title: Other Interests
-  type: list
+- title: Volunteering
+  type: time_table
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: Tamil Language Ambassador
+      institution: Aya, Cohere for AI
+      year: Jun 2023 - Dec 2023
+      description:
+        - Spread the word about the Aya project and brought in more volunteers to contribute to this open science initiative by Cohere for AI.
+    - title: Core Committee Member
+      institution: AI Tamil Nadu (AI Coimbatore)
+      year: Nov 2022 - Present
+    - title: Executive Committee Member
+      institution: Data Conversations
+      year: Jan 2023 - Present
+      description:
+        - Help plan and organize events for the Data Conversations initiative.
+    - title: Data Science Mentor
+      institution: TeamEpic
+      year: Jan 2023 - Jul 2023
+      description:
+        - Managed a cohort of graduates, guiding and mentoring them on real-world data science projects.
+    - title: Women Techmakers Ambassador
+      institution: Google
+      year: Nov 2022 - Present
+      description:
+        - As an ambassador of the WTM Coimbatore chapter, help organize tech focused community events and speak at events to share knowledge and expertise.
+    - title: Mentor
+      institution: Springboard India
+      year: Apr 2020 - Apr 2021
+      description:
+        - Mentored students and professionals on the curriculum-based Data Science Career track.
+    - title: AI/ML Committee Core Member
+      institution: GHCI, AnitaB.org
+      year: Mar 2015 - Present
+
+- title: Certifications
+  type: time_table
+  contents:
+    - title: DeepLearning.AI TensorFlow Developer Specialization
+      institution: Coursera
+      year: Aug 2023
+      description:
+        - <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/28D27F7DH6BQ">Verify</a>
+    - title: Sequences, Time Series and Prediction
+      institution: Coursera
+      year: Aug 2023
+      description:
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/T677LTK9Z9Q8">Verify</a>
+    - title: Natural Language Processing in TensorFlow
+      institution: Coursera
+      year: Aug 2023
+      description:
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/Z677H4M72C8M">Verify</a>
+    - title: Convolutional Neural Networks in TensorFlow
+      institution: Coursera
+      year: Jun 2023
+      description:
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/4YSLHFQFH7UH">Verify</a>
+    - title: Introduction to TensorFlow for AI, ML and Deep Learning
+      institution: Coursera
+      year: Mar 2023
+      description:
+        - <a href="https://www.coursera.org/account/accomplishments/verify/Q3BK425MC6PE">Verify</a>
+    - title: ML Observability Fundamentals
+      institution: Arize University
+      year: Feb 2023
+      description:
+        - <a href="https://github.com/AbinayaM02/Certifications/blob/master/ml-observability-fundamentals-certification.pdf">Certificate</a>
+    - title: Full Stack Deep Learning - Spring 2021
+      institution: FSDL LLC.
+      year: Jun 2021
+      description:
+        - <a href="https://verified.sertifier.com/en/verify/54541075005263">Verify</a>
+    - title: Introduction to Databases
+      institution: Jennifer Widom, Stanford
+      year: Dec 2011
+      description:
+        - <a href="https://github.com/AbinayaM02/Certifications/blob/master/Introduction%20to%20Databases.pdf">Certificate</a>
+    - title: Machine Learning
+      institution: Andrew Ng
+      year: Dec 2011
+      description:
+        - <a href="https://github.com/AbinayaM02/Certifications/blob/master/ML.pdf">Certificate</a>
+    - title: Introduction to Artificial Intelligence
+      institution: Sebastian Thrun & Peter Norvig
+      year: Dec 2011
+      description:
+        - <a href="https://github.com/AbinayaM02/Certifications/blob/master/AI.pdf">Certificate</a>
