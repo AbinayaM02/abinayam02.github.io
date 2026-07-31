@@ -22,6 +22,57 @@
       description:
         - CGPA 8.17 / 10.0
 
+- title: Experience
+  type: time_table
+  contents:
+    - title: Chief Technology Officer
+      institution: Nunnari Labs
+      year: Aug 2023 - Present
+      description:
+        - Set up and manage the technological strategy, orchestrating the development of cutting-edge AI and ML solutions while staying attuned to the ever-evolving landscape of the AI/ML domain.
+        - Craft the roadmap for product innovation, foster a culture of research-driven development, and nurture a high-caliber technical team.
+    - title: AI/ML Consultant
+      institution: Freelance
+      year: Jan 2023 - Present
+      description:
+        - Build end-to-end solutions focusing on NLP/NLU/NLG, ML/DL and MLOps for clients independently.
+    - title: Core Team Lead
+      institution: AI TamilNadu (previously AI Coimbatore)
+      year: Jan 2022 - Present
+      description:
+        - As a co-lead, help organize events and oversee the open source research initiatives of the community.
+    - title: Program Manager
+      institution: Indian Institute of Technology, Madras
+      year: May 2023 - Apr 2024
+      description:
+        - Managed and contributed to Hidden Voices, an open source project by the Robert Bosch Centre for Data Science and AI (RBCDSAI) and SuperBloom Studios, supported by the IIT Madras Alumni Association, created to reduce the gender data gap in Wikipedia.
+    - title: Manager, Data Science
+      institution: Mphasis NEXT Labs
+      year: Jan 2021 - Nov 2022
+      description:
+        - Managed multiple client-facing and internal projects for the Applied AI & Data Science team, built IPs and services for AWS Marketplace, and developed end-to-end products.
+        - Delivered multiple ML/DL components for one of the big four consulting firms.
+    - title: Assistant Manager, Applied AI & Data Science
+      institution: Mphasis NEXT Labs
+      year: May 2017 - Dec 2020
+      description:
+        - Built ML and DL algorithms for proof of concepts for finance sector clients as part of the cognitive computing platform, DeepInsights.
+        - Led the intelligent assistant for developers, Cognitive Twin, from idea to delivery.
+        - Led a team of data scientists and engineers building and deploying an implicit recommendation engine for a top pharmaceutical company.
+        - Built an end-to-end solution to index unstructured text from a variety of document types, providing key phrases and summaries using deep learning.
+        - Developed PACE-ML, an MLOps platform for continuous delivery of production ready models.
+    - title: Software Engineer II
+      institution: Cisco
+      year: Aug 2014 - Apr 2017
+      description:
+        - Worked on Nexus 1000v, handling high availability and upgrades, and redesigned the RESTful API infrastructure in Node.js.
+        - Worked on Virtual Application Cloud Segmentation, automating the provisioning and deployment of customized virtual resources.
+    - title: Programmer Analyst Trainee
+      institution: Cognizant Technology Solutions
+      year: Jul 2010 - Apr 2011
+      description:
+        - Worked on a project for Walmart in the retail sector.
+
 # Skills section hidden for now - uncomment the block below to restore it.
 # - title: Skills
 #   type: nested_list
@@ -52,9 +103,6 @@
       year: Jun 2023 - Dec 2023
       description:
         - Spread the word about the Aya project and brought in more volunteers to contribute to this open science initiative by Cohere for AI.
-    - title: Core Committee Member
-      institution: AI Tamil Nadu (AI Coimbatore)
-      year: Nov 2022 - Present
     - title: Executive Committee Member
       institution: Data Conversations
       year: Jan 2023 - Present
