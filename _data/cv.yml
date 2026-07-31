@@ -22,26 +22,27 @@
       description:
         - CGPA 8.17 / 10.0
 
-- title: Skills
-  type: nested_list
-  contents:
-    - title: Languages & Frameworks
-      items:
-        - Python
-        - PyTorch
-        - TensorFlow
-        - Scikit-learn
-        - spaCy
-        - HuggingFace
-        - FastAPI
-    - title: MLOps & Infrastructure
-      items:
-        - MLFlow
-        - Weights & Biases
-        - Docker
-        - AWS
-        - GCP
-        - Jupyter
+# Skills section hidden for now - uncomment the block below to restore it.
+# - title: Skills
+#   type: nested_list
+#   contents:
+#     - title: Languages & Frameworks
+#       items:
+#         - Python
+#         - PyTorch
+#         - TensorFlow
+#         - Scikit-learn
+#         - spaCy
+#         - HuggingFace
+#         - FastAPI
+#     - title: MLOps & Infrastructure
+#       items:
+#         - MLFlow
+#         - Weights & Biases
+#         - Docker
+#         - AWS
+#         - GCP
+#         - Jupyter
 
 - title: Volunteering
   type: time_table
