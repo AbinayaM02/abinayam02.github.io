@@ -1,0 +1,33 @@
+<div class="col">
+  {% if talk.url %}
+    <a href="{{ talk.url }}" target="_blank" rel="noopener noreferrer">
+  {% endif %}
+  <div class="card h-100 {% if talk.url %}hoverable{% endif %}">
+    {% if talk.img %}
+      {%
+        include figure.liquid
+        loading="eager"
+        path=talk.img
+        sizes="250px"
+        alt="talk thumbnail"
+        class="card-img-top"
+      %}
+    {% endif %}
+    <div class="card-body">
+      <h2 class="card-title">{{ talk.title }}</h2>
+      <p class="card-text">{{ talk.description }}</p>
+      <p class="post-meta">
+        {{ talk.date | date: '%B %d, %Y' }}
+        {% if talk.venue or talk.mode %}
+          &nbsp; &middot; &nbsp; {{ talk.venue }}{{ talk.mode }}
+        {% endif %}
+        {% if talk.url %}
+          &nbsp; &middot; &nbsp; <i class="fa-brands fa-youtube"></i> recording
+        {% endif %}
+      </p>
+    </div>
+  </div>
+  {% if talk.url %}
+    </a>
+  {% endif %}
+</div>
