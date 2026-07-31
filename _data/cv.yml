@@ -127,6 +127,24 @@
       institution: GHCI, AnitaB.org
       year: Mar 2015 - Present
 
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - title: Aya 500 Contribution Points
+      institution: Cohere for AI
+      year: 2023
+    - title: vGHC Speaker
+      institution: AnitaB.org Grace Hopper Celebration
+      year: 2021
+    - title: She-Hack - Runner up
+      institution: Go-Jek
+      year: 2017
+    - title: Digital Duchess Hackathon - Runner up
+      institution: Sabre
+      year: 2017
+    - title: Spirit of Winning (x3)
+      institution: Mphasis
+
 - title: Certifications
   type: time_table
   contents:
